@@ -12,10 +12,16 @@ class ImageCircle: UIImageView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.cornerRadius = self.frame.height / 2
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor(red:1.00, green:0.57, blue:0.00, alpha:1.0).cgColor
+//        layer.shadowOpacity = 1
+//        layer.shadowRadius = 5
+//        layer.shadowOffset = CGSize(width: 0.0, height: 5)
+//        layer.shadowColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1.0).cgColor
+        //layer.masksToBounds = true
         
+    }
+    
+    override func layoutSublayers(of layer: CALayer) {
+        layer.cornerRadius = self.frame.height / 2
     }
     
 
